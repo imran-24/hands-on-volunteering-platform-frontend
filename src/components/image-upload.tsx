@@ -16,9 +16,10 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   path,
   onChange,
 }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [buffer, setBuffer] = useState<File | null>(null);
 
+  console.log(buffer);
+  
   const uploadImage = async (file: File | null) => {
     console.log(file);
     if(file === null) return;
