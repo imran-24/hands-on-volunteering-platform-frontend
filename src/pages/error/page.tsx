@@ -1,5 +1,3 @@
-import React from "react";
-// import FuzzyText from "../../components/ui/fuzzy-text";
 import { Link } from "react-router-dom";
 
 // const hoverIntensity = 0.5;

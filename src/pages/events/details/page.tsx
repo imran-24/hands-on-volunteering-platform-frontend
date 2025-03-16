@@ -12,6 +12,7 @@ const EventDetailsPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(true);
 
+  console.log(loading);
   useEffect(() => {
     // if(!params.id) return;
 
