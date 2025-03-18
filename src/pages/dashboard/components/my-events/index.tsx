@@ -58,11 +58,15 @@ const MyEvents = () => {
     );
   }
 
+  const events = data.events;
+
+  if(!events.length) return;
+  
   return (
     <div className='relative w-full px-16'>
       <Carousel>
         <CarouselContent>
-          {data.events.map((event: Event) => (
+          {events.map((event: Event) => (
             <CarouselItem key={event.id}>
               <MyEventCard
                 description={event.description}

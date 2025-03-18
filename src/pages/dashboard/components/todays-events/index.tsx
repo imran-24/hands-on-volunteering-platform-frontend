@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Frown, ServerCrash } from "lucide-react";
+import { Smile, ServerCrash } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface EventResponse {
@@ -63,7 +63,7 @@ const TodaysEvent = () => {
     return (
       <div className='px-16'>
         <Card className='flex flex-col flex-1 justify-center items-center'>
-          <Frown className='h-7 w-7 text-zinc-500 ' />
+          <Smile className='h-7 w-7 text-zinc-500 ' />
           <p className='text-xs text-zinc-500 dark:text-zinc-400'>
             There is no events for today
           </p>

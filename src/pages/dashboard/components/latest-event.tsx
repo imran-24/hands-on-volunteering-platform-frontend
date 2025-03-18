@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface EventResponse {
   event: Event;
@@ -30,7 +31,11 @@ const LatestEvent = () => {
   });
 
   if (status === "pending") {
-    return <div className='col-span-5 relative w-full px-16'></div>;
+    return (
+      <div className='col-span-5 relative w-full px-16'>
+        <LatestEventSkeleton />
+      </div>
+    );
   }
 
   if (status === "error") {
@@ -44,8 +49,9 @@ const LatestEvent = () => {
     );
   }
 
-
   const event = data.event;
+
+  if (!event) return null;
 
   return (
     <div className='col-span-7 lg:col-span-5 relative w-full font-mono'>
@@ -92,3 +98,31 @@ const LatestEvent = () => {
 };
 
 export default LatestEvent;
+
+export function LatestEventSkeleton() {
+  return (
+    <div className='col-span-7 lg:col-span-5 relative w-full font-mono'>
+      <Card className='gap-2'>
+        <CardHeader>
+          <CardTitle className='flex items-start justify-between'>
+            <div className='flex items-center space-x-1 '>
+              <div className='size-2 shrink-0  bg-red-500 rounded-full' />
+              <Skeleton className='h-6 w-40' />
+            </div>
+            <Skeleton className='h-4 w-16' />
+          </CardTitle>
+        </CardHeader>
+        <CardContent className='space-y-2'>
+          <div className='flex items-center text-muted-foreground space-x-1'>
+            <Clock className='size-4' />
+            <p>Today at:</p>
+            <Skeleton className='h-6 w-20' />
+            <ArrowRight className='size-4' />
+            <Skeleton className='h-6 w-20' />
+          </div>
+          <Skeleton className='h-4 w-40' />
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
