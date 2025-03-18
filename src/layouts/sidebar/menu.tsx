@@ -4,6 +4,7 @@ import { routes } from "@/utils/constant";
 import { useAuth } from "@/context/auth-provider";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import logo from "src/assets/images/logo.svg";
 
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -29,7 +30,7 @@ const Menu = () => {
     <div>
       <Link to={"/"}>
         <img
-          src='/src/assets/images/logo.svg'
+          src={logo}
           alt=''
           className='object-contain object-center shrink-0  size-8 bg-transparent'
         />
