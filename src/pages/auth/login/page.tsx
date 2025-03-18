@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { useAuth } from "@/context/auth-provider";
 import { Link, useNavigate } from "react-router-dom";
+import image from "../../../assets/images/login.webp";
 
 const formSchema = z.object({
   email: z.string().min(2, {
@@ -64,7 +65,7 @@ export function LoginPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 bg-white h-full rounded-3xl max-w-4xl w-full mx-auto '>
         <div className='hidden md:flex overflow-hidden'>
           <img
-            src='/src/assets/images/login.webp'
+            src={image}
             alt=''
             className='h-full object-cover object-start overflow-hidden'
           />

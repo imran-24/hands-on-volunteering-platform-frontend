@@ -220,16 +220,16 @@ export const helpRequests = [
 ];
 
 export const avatars = [
-  "/src/assets/avatars/toon_1.png",
-  "/src/assets/avatars/toon_2.png",
-  "/src/assets/avatars/toon_3.png",
-  "/src/assets/avatars/toon_4.png",
-  "/src/assets/avatars/toon_5.png",
-  "/src/assets/avatars/toon_6.png",
-  "/src/assets/avatars/toon_7.png",
-  "/src/assets/avatars/toon_8.png",
-  "/src/assets/avatars/toon_9.png",
-  "/src/assets/avatars/toon_10.png",
+  "./avatars/toon_1.png",
+  "./avatars/toon_2.png",
+  "./avatars/toon_3.png",
+  "./avatars/toon_4.png",
+  "./avatars/toon_5.png",
+  "./avatars/toon_6.png",
+  "./avatars/toon_7.png",
+  "./avatars/toon_8.png",
+  "./avatars/toon_9.png",
+  "./avatars/toon_10.png",
 ];
 
 export const solidBgColors = [

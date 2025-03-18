@@ -1,3 +1,5 @@
+import billboard from "../../../../assets/images/billboard.jpg";
+
 const eventsList = [
   {
     id: 1,
@@ -30,7 +32,7 @@ const Events = () => {
           <div key={event.id} className='rounded-t-xl'>
             <div className='shadow rounded-xl'>
               <img
-                src={"/src/assets/images/billboard.jpg"}
+                src={billboard}
                 alt=''
                 className='h-28 object-cover shrink-0 w-full rounded-t-xl'
               />
