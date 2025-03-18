@@ -4,7 +4,7 @@ import { routes } from "@/utils/constant";
 import { useAuth } from "@/context/auth-provider";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import logo from "src/assets/images/logo.svg";
+import logo from "../../assets/images/logo.svg";
 
 import axios from "axios";
 axios.defaults.withCredentials = true;
