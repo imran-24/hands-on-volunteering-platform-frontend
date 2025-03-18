@@ -9,7 +9,6 @@ import { Event } from "@/utils/type";
 const EventDetailsPage = () => {
   const params = useParams();
   const [event, setEvent] = useState<Event | null>(null);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(true);
 
   console.log(loading);

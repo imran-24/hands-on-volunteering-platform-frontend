@@ -19,6 +19,16 @@ import HomePage from "./App";
 const router = createBrowserRouter([
   {
     
+    path: "*",
+    element: (
+      <PrivateRoute>
+        <HomePage />
+      </PrivateRoute>
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    
     path: "/",
     element: (
       <PrivateRoute>
